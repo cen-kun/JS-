@@ -18,15 +18,29 @@
 			 *  在函数中return后的语句都不会执行
 			 * 
 			 * 	如果return语句后不跟任何值就相当于返回一个undefined，
-			 * 	如果函数中不写return，则也会返回undefined
-			 * 
+			 * 	如果函数中不写return，则也会返回undefined    
+			 *  但是如果没有人接收返回的结果是不是就是相当于一个过程
+			 *  意思是 我在外面传入的变量如果不是返回的话会不会被改变
+			 *  通过下面的验证 基础数据类型的值是不会被改变的  也就是说形参值是一个应用而已 
+			 *  他只是负责吧调用函数所对应的参数的实际的值传递导函数中而不会对原本的实际的参数有影响
 			 * 	return后可以跟任意类型的值
 			 * 
 			 */
+
+
+			 var a1 = 1;
+			 var b1 = 1;
+			 var c1 = 1;
+
+
 			function sum(a , b , c){
 				//alert(a + b +c);
 				
 				var d = a + b + c;
+
+				a = 2;
+				b = 2;
+				c = 2;
 				
 				return d;
 				
@@ -37,11 +51,15 @@
 			//调用函数
 			//变量result的值就是函数的执行结果
 			//函数返回什么result的值就是什么
-			var result = sum(4,7,8);
+			// var result = sum(4,7,8);
+			var result = sum(a1,b1,c1);
 			
 			//var result = alert("hello");
 			
 			console.log("result = "+result);
+			console.log("a1 = "+a1);
+			console.log("b1 = "+b1);
+			console.log("c1 = "+c1);
 			
 			
 		</script>

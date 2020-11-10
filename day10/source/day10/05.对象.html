@@ -14,7 +14,11 @@
 			obj.name = "孙悟空";
 			obj.age = 18;
 			
-			//对象的属性值可以是任何的数据类型，也可以是个函数
+			//对象的属性值可以是任何的数据类型，也可以是个函数   
+			//JS中是不是忽略了类的概念 
+			//在类中属性就是属性 函数表示一个类的行为 
+			//那么在JS中函数可以当做一个类的属性
+
 			obj.sayName = function(){
 				console.log(obj.name);
 			};
@@ -43,7 +47,7 @@
 				
 				name:"猪八戒",
 				age:18,
-				sayName:function(){
+				sayName:function(){                 //这个sayName就变成了函数名了么
 					console.log(obj2.name);
 				}
 				

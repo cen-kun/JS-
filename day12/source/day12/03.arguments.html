@@ -21,11 +21,11 @@
 			 */
 			
 			function fun(a,b){
-				//console.log(arguments instanceof Array);
-				//console.log(Array.isArray(arguments));
-				//console.log(arguments[1]);
-				//console.log(arguments.length);
-				console.log(arguments.callee == fun);
+				console.log(arguments instanceof Array);  //false
+				console.log(Array.isArray(arguments));   //false
+				console.log(arguments[1]);			//true
+				console.log(arguments.length);		//2
+				console.log(arguments.callee == fun);  //true
 			}
 			
 			fun("hello",true);

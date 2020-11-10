@@ -15,6 +15,7 @@
 			//console.log(typeof arr);
 			
 			//使用字面量创建数组时，可以在创建时就指定数组中的元素
+			//字面量是不是就是所见即所得
 			var arr = [1,2,3,4,5,10];
 			
 			//console.log(arr[3]);
@@ -28,10 +29,10 @@
 			arr = [10];
 			
 			//创建一个长度为10的数组
-			arr2 = new Array(10);
+			arr2 = new Array(10);  //这种方式不能够生成只有一个元素为10的数组
 			
 			//console.log(arr2.length);
-			//数组中的元素可以是任意的数据类型
+			//数组中的元素可以是任意的数据类型   是不是还可以放一个函数？
 			arr = ["hello",1,true,null,undefined];
 			
 			//也可以是对象
